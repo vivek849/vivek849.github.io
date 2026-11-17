@@ -12,7 +12,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css" />
     <!-- Add favicon -->
-    <link rel="shortcut icon" href="VIVEK.jpg" type="image/x-icon" />
+    <link rel="icon" href="./VIVEK.JPG" type="image/jpeg" />
+    <meta
+      name="description"
+      content="Portfolio of Vivek Kumar Chaurasiya, frontend developer."
+    />
 
     <title>Portfolio | Vivek</title>
   </head>
@@ -41,6 +45,10 @@
             </li>
             <li class="nav_list">
               <a href="#contact" class="nav-link">Contact</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="/projects" class="nav-link">Work</a>
               <div class="circle"></div>
             </li>
           </ul>
@@ -75,7 +83,7 @@
               </p>
             </div>
             <div class="featured-text-btn">
-              <a href="#about" class="scroll-btn"
+              <a href="#contact"
                 ><button class="btn blue-btn">Hire Me</button></a
               >
               <a
@@ -85,15 +93,20 @@
               ></a>
             </div>
             <div class="social_icons">
-              <div class="icon"><i class="uil uil-instagram"></i></div>
-              <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-              <div class="icon"><i class="uil uil-twitter"></i></div>
-              <div class="icon"><i class="uil uil-github-alt"></i></div>
+              <a href="https://www.instagram.com/vivek_kr_chaurasiya/" target="_blank" rel="noopener" aria-label="Instagram"
+                ><div class="icon"><i class="uil uil-instagram"></i></div
+              ></a>
+              <a href="https://www.linkedin.com/in/vivek-kumar-chaurasiya-944187220" target="_blank" rel="noopener" aria-label="LinkedIn"
+                ><div class="icon"><i class="uil uil-linkedin-alt"></i></div
+              ></a>
+              <a href="https://github.com/vivek849" target="_blank" rel="noopener" aria-label="GitHub"
+                ><div class="icon"><i class="uil uil-github-alt"></i></div
+              ></a>
             </div>
           </div>
           <div class="featured-image">
             <div class="image">
-              <img src="./VIVEK.jpg" alt="avatar" />
+              <img src="./VIVEK.JPG" alt="Vivek Kumar Chaurasiya" />
             </div>
           </div>
           <div class="scroll-icon-box">
@@ -113,10 +126,10 @@
               <div class="about-info">
                 <h3>My introduction</h3>
                 <p>
-                  I am well-versed in HTML, CSS and JavaScript , and other
-                  cutting edge frameworks and libraries like ReactJS ,which
+                  I am well-versed in HTML, CSS and JavaScript, and other
+                  cutting edge frameworks and libraries like ReactJS, which
                   allows me to implement interactive features. Additionally, I
-                  have experirence working with Artificial Intelligence &
+                  have experience working with Artificial Intelligence &
                   Machine Learning.
                 </p>
                 <div class="about-btn">
@@ -177,6 +190,11 @@
               <h3>Experience</h3>
               <label>2+ Years in the field</label>
             </div>
+            <a href="/projects" class="project-box project-link">
+              <i class="uil uil-chart-line"></i>
+              <h3>See the details</h3>
+              <label>Projects, experience &amp; stats <i class="uil uil-arrow-right"></i></label>
+            </a>
           </div>
         </section>
 
@@ -198,17 +216,22 @@
             <div class="col">
               <form
                 id="contactForm"
-                action="#"
+                name="contact"
+                action="/"
                 method="POST"
                 class="form-control"
-                onsubmit="showAlert(event)"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
               >
-                <!-- Replace with your Access Key -->
+                <input type="hidden" name="form-name" value="contact" />
                 <input
                   type="hidden"
-                  name="access_key"
-                  value="c15d571c-1292-472b-b4b6-bc532369e463"
+                  name="subject"
+                  value="New portfolio message (%{submissionId})"
                 />
+                <p class="hidden-field">
+                  <label>Don't fill this out: <input name="bot-field" /></label>
+                </p>
 
                 <div class="form-inputs">
                   <input
@@ -216,6 +239,7 @@
                     class="input-field"
                     name="name"
                     placeholder="Name"
+                    aria-label="Name"
                     required
                   />
                   <input
@@ -223,6 +247,7 @@
                     class="input-field"
                     name="email"
                     placeholder="Email"
+                    aria-label="Email"
                     required
                   />
                 </div>
@@ -232,52 +257,22 @@
                     name="message"
                     class="input-field"
                     placeholder="Message"
+                    aria-label="Message"
                     required
                   ></textarea>
                 </div>
-
-
-
 
                 <div class="form-button">
                   <button type="submit" class="btn">
                     Send <i class="uil uil-message"></i>
                   </button>
                 </div>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
               </form>
             </div>
           </div>
         </section>
 
-        <!-- <section class="section" id="contact">
-                <div class="top-header">
-                    <h1>Get in touch</h1>
-                    <span>Do you have a project in your mind, contact me here</span>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="contact-info">
-                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                            <p><i class="uil uil-envelope"></i> Email: vkch849@gmail.com</p>
-                            <p><i class="uil uil-phone"></i> +91 9471431581</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-control">
-                            <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Name">
-                                <input type="text" class="input-field" placeholder="Email">
-                            </div>
-                            <div class="text-area">
-                                <textarea placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn">Send <i class="uil uil-message"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
       </main>
 
       <!-- --------------- FOOTER --------------- -->
@@ -299,16 +294,19 @@
             <li class="footer_menu_list">
               <a href="#contact">Contact</a>
             </li>
+            <li class="footer_menu_list">
+              <a href="/projects">Work</a>
+            </li>
           </ul>
         </div>
         <div class="footer-social-icons">
-          <a href="https://www.instagram.com/vivek_kr_chaurasiya/"
+          <a href="https://www.instagram.com/vivek_kr_chaurasiya/" target="_blank" rel="noopener" aria-label="Instagram"
             ><div class="icon"><i class="uil uil-instagram"></i></div
           ></a>
-          <a href="www.linkedin.com/in/vivek-kumar-chaurasiya-944187220"
+          <a href="https://www.linkedin.com/in/vivek-kumar-chaurasiya-944187220" target="_blank" rel="noopener" aria-label="LinkedIn"
             ><div class="icon"><i class="uil uil-linkedin-alt"></i></div
           ></a>
-          <a href="https://github.com/vivek849"
+          <a href="https://github.com/vivek849" target="_blank" rel="noopener" aria-label="GitHub"
             ><div class="icon"><i class="uil uil-github-alt"></i></div
           ></a>
         </div>
@@ -332,17 +330,6 @@
 
     <!-- ----- MAIN JS ----- -->
     <script src="./script.js"></script>
-    <script>
-      function showAlert(event) {
-        // Prevent the form from submitting immediately
-        event.preventDefault();
 
-        // Show the alert
-        alert("Form submitted successfully!");
-
-        // Continue form submission
-        document.getElementById("contactForm").submit();
-      }
-    </script>
   </body>
 </html>
